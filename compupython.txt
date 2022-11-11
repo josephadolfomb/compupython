@@ -5,3 +5,21 @@ Grace Hoper.
 puede escribir en estos 1 0s's
 en otro lenguaje para humanos y luego
 traducir a 1 0's
+
+profesor Richy C
+más cercano al hardware.
+Es el latin de los lenguajes de Programación
+
+Gido Van roson
+Que fueran comprensibles
+Eliminar los símbolos
+
+Turing complete
+escribir cualquier algoritmo
+
+Sintaxis: secuencia de símbolos correcta
+Semántica: cuáles interpolaciones tienen
+significado.
+Semántica: define cuál de todos los
+significados es el correcto.
+los lenguajes son precisos.
