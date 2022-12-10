@@ -23,3 +23,26 @@ significado.
 Semántica: define cuál de todos los
 significados es el correcto.
 los lenguajes son precisos.
+
+Objetos, Expresiones y tipos numéricos
+
+Objetos: abstracción más alta cómo modelamos
+el mundo en nuestros lenguajes de programación
+son valores en memoria que podemos referenciar 
+en variables, pueden ser enteros, booleanos, 
+tipos escalares y no escalares, que podemos 
+subdividir o no podemos subdividir.
+
+Asignación de variables
+6/31
+
+El garbage collector libera ese pedazo de
+memoria al reasignar la variable a otro valor.
+= significa asignación.
+
+Cadenas y entradas
+7/31
+
+cadena es una secuencia de caracteres.
+
+
