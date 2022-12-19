@@ -44,5 +44,860 @@ Cadenas y entradas
 7/31
 
 cadena es una secuencia de caracteres.
+los operadores tienen diferentes significados.
+
+'123'
+'123' * 3
+'123' + '456'
+('Hip' * 3) + ' ' + 'hurra'
+cadena de formato:
+f'{"Hip " * 3} hurra'
+
+funciones:
+len (longitud)
+Indexing (indexación)
+Slicing (rebanadas): se obtienen substrings
+ejemplo: my_str[comienzo:fin:pasos]
+
+>>> my_str = 'Platzi'
+>>> len(my_str)
+6
+>>> my_str[0]
+'P'
+>>> my_str[1]
+'l'
+>>> my_str[2]
+'a'
+>>> my_str[2:]
+'atzi'
+>>> my_str[:3]
+'Pla'
+>>> my_str[:-2]
+'Plat'
+>>> my_str[::2]
+'Paz'
+>>> 'Yo amo a ' + my_str
+'Yo amo a Platzi'
+>>> f'Yo amo a {my_str}'
+'Yo amo a Platzi'
+>>> f'Yo amo a {my_str}, ' * 100
+'Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi, Yo amo a Platzi,
+
+en la documentación existen muchas más operaciones.
+
+los objetos de tipo str pueden representarse con "" o ''.
+El operador + tiene diferente significado según el tipo de dato.
+Cuando lo utilizamos en cadena significa el operador de concatenación.
+El operador de * en realidad en cadenas significa el operador de repetición.
+Las cadenas son inmutables, una vez las declaramos en memoria ya no podemos
+cambiarlas, podemos reasignar la misma variable a una cadena distinta pero
+la cadena que declaramos al principio ya no puede modificarse.
+Ejemplo: si tenemos la cadena inicial platzi y luego la concatenamos 
+no es que estemos modificando la cadena platzi sino que estamos generando un
+nuevo espacio en memoria con este valor y estamos apuntando hacia allá.
+
+Cómo podemos obtener inputs del usuario? se llaman entradas.
+Entradas(inputs)
+En Python usamos la función input para recibir datos del usuario e 
+ingresarlos al programa.
+En otros lenguajes de programación utilizamos diversos mecanismos, 
+por ejemplo si están desarrollando una aplicación web pueden utilizar 
+el input y leerlo con javascript.
+En Python esta función siempre regresa cadenas entonces si quisieran utilizar
+esta función con enteras se tendría que cambiar el tipo. (type casting).
+
+>>> nombre = input ('Cual es tu nombre: ')
+Cual es tu nombre: David
+>>> nombre
+'David'
+>>> print(nombre)
+David
+>>> print('Tu nombre es', nombre)
+Tu nombre es David
+>>> print(f'Tu nombre es {nombre}')
+Tu nombre es David
+>>> numero = input('Escribe un numero: ')
+Escribe un numero: 45
+>>> print(type(numero))
+<class 'str'>
+>>> numero = int(input('Escribe un numero: '))
+Escribe un numero: 45
+>>> print(type(numero))
+<class 'int'>
+
+Con esto ya sabemos como trabajar con tipos escalares y no escalares
+es decir aquellos tipos que tienen una estructura interna en el caso 
+de la cadena es la secuencia de caracteres que está compuesta esta 
+cadena y también sabemos como recibir inputs del usuario.
+
+>>> nombre = input ('Cual es tu nombre: ')
+Cual es tu nombre: Joseph
+>>> print(f'Hola {nombre}', len(nombre))
+Hola Joseph 6
+
+_______
+
+Programas ramificados
+8/31
+
+Realizar comparaciones entre 2 valores.
+operadores de comparación:
+2 == 3
+2 != 3
+2 > 3
+2 < 3
+2 <= 3
+2 >= 3
+
+operadores lógicos:
+True and True
+False or True
+not True
+
+if <condition>:
+    <expresion>
+
+if 3 > 2:
+   print('3 es mayor que 2 ')
+
+---
+
+if <condition>:
+    <expresion>
+else:
+    <expresion>
+
+if 5 <= 10:
+    ...
+else:
+   print('5 no es mayor o igual que 10 ')
+
+
+---
+
+if <condition>:
+    <expresion>
+elif <condition>:
+    <expresion>
+else:
+    <expresion>
+
+if 4 > 5:
+    ...
+elif 4 < 5:
+   print('4 es menor que 5')
+else:
+   ...
+
+pueden haber tantos elif como queramos.
+
+Tablas de verdad: https://www.youtube.com/watch?v=Pfyuv5ZnNNw
+
+
+____________
+
+Iteraciones
+9/31
+
+Permiten realizar la misma tarea varias veces.
+Puedes escribir iteraciones dentro de interaciones como relojes.
+Podemos usar el statement break para salir anticipadamente.
+Tener cuidado con los infinit loop.
+
+
+_____________
+
+Bucles for
+10/31
+
+Los bucles, en diversos lenguajes de programación pueden ser definidos o indefinidos. Los bucles definidos preestablecen las condiciones de la iteración por adelantado. Por su parte, los bucles indefinidos establecen la condición en la que una iteración terminará. En este último tipo de bucles existe el riesgo de que el bucle se vuelva infinito (cuando la condición de suspensión nunca se cumple).
+
+Los bucles definidos se implementan en Python a través del keyword for. Por su parte, los bucles indefinidos se implementan con el keyword while.
+
+Sin embargo, esta no es la única forma de implementar bucles definidos. Por ejemplo, Javascript puede implementar un bucle definido mediante el siguiente constructo:
+
+for (i = 0; i <= 10; i++) {
+  <expresión>
+}
+El bucle se puede leer de la siguiente manera:
+
+Inicializa el bucle en 0
+Continua el bucle mientras i sea menor o igual que 10
+Incrementa i en uno al final de cada iteración
+Es importante señalar que la expresión i++ es equivalente a lo que en Python escribiríamos como i += 1.
+
+Una segunda forma de crear un bucle definido es iterando en una colección de objetos. Esta es la forma que Python utiliza:
+
+for <variable> in <iterable>:
+    <expresión>
+El bucle for en Python
+En la definición anterior debemos entender <iterable> como una colección de objetos; y la <variable> como el elemento específico que se está exponiendo mediante el bucle en cada iteración.
+
+>>> frutas = ['manzana', 'pera', 'mango']
+>>> for fruta in frutas:
+        print(fruta)
+
+manzana
+pera
+mango
+Iterables
+En Python, un iterable es un objeto que se puede utilizar en un bucle definido. Si un objeto es iterable significa que se puede pasar como argumento a la función iter. El iterable que se pasa como parámetro a la función iter
+regresa un iterator.
+
+>>> iter('cadena') # cadena
+>>> iter(['a', 'b', 'c']) # lista
+>>> iter(('a', 'b', 'c')) # tupla
+>>> iter({'a', 'b', 'c'}) # conjunto
+>>> iter({'a': 1, 'b': 2, 'c': 3}) # diccionario
+Todas las llamadas anteriores regresan un objeto de tipo iterator.
+
+¿Qué pasa si le pasamos a la función iter un objeto que no es iterable? Obtendremos un TypeError que señala que el objeto no es un iterable. Esto es un ejemplo de programación defensiva en el que Python verifica el tipo del
+objeto antes de proceder al cómputo. ¡Intentalo en tu consola!
+
+Es importante señalar que estos no son los únicos tipos de objetos que pueden ser iterable. Existen gran cantidad de ejemplos en la librería estándar y, de hecho, casi cualquier objeto se puede convertir en un iterable (pero eso
+ya lo veremos cuando hablemos de Python avanzado).
+
+Iterators
+Ahora que ya sabemos cómo obtener un iterator, ¿Qué podemos hacer con él? Un iterator es un objeto que regresa sucesivamente los valores asociados con el iterable.
+
+>>> frutas = ['manzana', 'pera', 'mango']
+>>> iterador = iter(frutas)
+>>> next(iterador)
+manzana
+>>> next(iterador)
+pera
+>>> next(iterador)
+mango
+Como puedes ver, el iterator guarda el estado interno de la iteración, de tal manera que cada llamada sucesiva a next regresa el siguiente elemento. ¿Qué pasa una vez que ya no existan más elementos en el iterable? La llamada
+a next arrojará un error de tipo StopIteration.
+
+¿Cómo implementa Python los bucles definidos?
+Ahora ya conocemos todos los elementos necesarios para entender que es lo que sucede en Python cuando ejecutamos un bucle for. Considera nuevamente el siguiente código:
+
+>>> frutas = ['manzana', 'pera', 'mango']
+>>> for fruta in frutas:
+        print(fruta)
+Este bucle se puede describir con los conceptos que explicamos previamente:
+
+Python llama internamente la función iter para obtener un iterator
+Una vez que tiene un iterator llama repetidamente la función next para
+tener acceso al siguiente elemento en el bucle.
+Detiene el bucle una vez que se arroja el error StopIteration.
+Bucles for con diccionarios
+Para iterar a lo largo de un diccionario tenemos varias opciones:
+
+Ejecutar el bucle for directamente en el diccionario, lo cual nos permite
+iterar a lo largo de las llaves del diccionario.
+Ejecutar el bucle for en la llamada keys del diccionario, lo cual nos permite
+iterar a lo largo de las llaves del diccionario.
+Ejecutar el bucle for en la llamada values del diccionario, lo cual nos
+permite iterar a lo largo de los valores del diccionario.
+Ejecutar el bucle for en la llamada items del diccionario, lo cual nos
+permite iterar en una tupla de las llaves y los valores del diccionario.
+estudiantes = {
+    'mexico': 10,
+    'colombia': 15,
+    'puerto_rico': 4,
+}
+
+for pais in estudiantes:
+    ...
+
+for pais in estudiantes.keys():
+    ...
+
+for numero_de_estudiantes in estudiantes.values():
+    ...
+
+for pais, numero_de_estudiantes in estudiantes.items():
+    ...
+Modificación del comportamiento de un bucle for
+Podemos modificar el comportamiento de un bucle for mediante los keywords
+break y continue.
+
+break termina el bucle y permite continuar con el resto del flujo de nuestro
+programa.
+
+continue termina la iteración en curso y continua con el siguiente ciclo de
+iteración.
+
+Conclusiones
+Como pudimos observar, Python implementa los bucles definidos mediante los bucles for. Esta implementación nos permite iterar a lo largo de cualquier objeto que sea iterable. Para iterar necesitamos un iterador que nos regresará
+el siguiente valor en cada iteración. Todo esto, Python lo puede hacer por nosotros con el constructo for ... in ....
+
+____________
+
+Representación de flotantes
+11/31
+
+La mayoría del tiempo los números flotantes (tipo float) son una muy buena aproximación de los números que queremos calcular con nuestras computadoras. Sin embargo, “la mayoría del tiempo” no significa todo el tiempo, y cuando no se comportan de esta manera puede tener consecuencias inesperadas.
+
+Por ejemplo, trata de correr el siguiente código:
+
+x = 0.0
+for i in range(10):
+    x += 0.1
+
+if x == 1.0:
+    print(f'x = {x}')
+else:
+    print(f'x != {x}')
+Es probable que te hayas sorprendido con el resultado. La mayoría de nosotros esperaríamos que imprimiera 1.0 en vez de 0.999999999999. ¿Qué es lo que pasó?.
+
+Para entender qué es lo que pasó tenemos que entender que es lo que pasa en la computadora cuando realizamos cómputos con números flotantes. Y para eso necesitamos entender números binarios.
+
+Cuando aprendiste a contar, lo que en realidad aprendiste es una técnica combinatoria para manipular los siguientes símbolos que le llamamos números: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+La forma en la que funciona esta técnica es asignando el número 10 a la 0 al número de la extrema derecha, 10 a la 1 al siguiente, 10 a la 2 al siguiente y así sucesivamente. De tal manera que el número 525 es simplemente la representación de (5 * 100) + (2 * 10) + (5 * 1).
+
+Esto nos dice que el número de números que podemos representar depende de cuanto espacio tengamos. Si tenemos un espacio de 3, podemos representar 1,000 números (10 elevado a la 3) o la secuencia del 0 al 999. Si tenemos 4, podemos representar 10,000 (10 elevado a la 4) o la secuencia del 0 al 9,999. De manera general podemos decir que con una secuencia de tamaño n, podemos representar 10 elevado a la n números.
+
+Los números binarios funcionan de la misma manera (de hecho cualquier número en cualquier base, por ejemplo, octales o hexadecimales). La única diferencia es cuántos símbolos tenemos para representar. En binario nada más tenemos 0, 1;
+en hexadecimal tenemos 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f.
+
+De esta manera podemos decir que el número de la extrema derecha es cantidad_de_simbolos**0, cantidad_de_simbolos**1, cantidad_de_simbolos**2, etc. Por lo que en binario, que nada más tenemos 2 símbolos, decimos 2**0, 2**1, 2**2, etc. Por ejemplo el número binario 101 es la representación de (1 * 4) + (0 * 2) + (1 * 1), es decir 5.
+
+Esta representación nos permite trabajar con todos los números positivos enteros dentro del computador, pero ¿Qué hacemos con los negativos y los racionales?.
+
+El caso de los números negativos es sencillo: simplemente agregamos un bit adicional que representa el signo y la añadimos en la extrema izquierda. Por lo que el número 0101 sería +5 y el número 1101 sería -5.
+
+El caso de los racionales es más complejo. En la mayoría de los lenguajes de programación modernos los racionales utilizan una implementación llamada punto flotante. ¿Cómo funciona esta representación?.
+
+Antes de pasar a binario, vamos a pretender que estamos trabajando con una computadora basada en decimales. Un número flotante lo representaríamos con un par de enteros: los dígitos significativos y el exponente. Por ejemplo, el número 2.345 se representaría como (2345 * 10**-3) o (2345, -3).
+
+El número de dígitos significativos determinan la precisión con la que podemos representar número. Por ejemplo si nada más tuviéramos dos dígitos significativos el número 2.345 no se podría representar de manera exacta y tendríamos que convertirlo a una aproximación, en este caso 2.3.
+
+Ahora pasemos a la verdadera representación interna de la computadora, que es en binario. ¿Cómo representarías el número 5/8 o 0.625? Lo primero que tenemos que saber es que 5/8 es en realidad el número 5 * 2**-3. Por lo que podríamos decir (101, -11) (recuerda que el número 5 es 101 en binario y el 3 es 11).
+
+Regresemos a nuestro problema inicial: ¿Cómo representaremos 1/10 (que escribimos en Python cómo 0.1)? Lo mejor que podemos hacer con cuatro dígitos significativos es (0011, -101) que es equivalente a 3/32 (0.09375). ¿Qué tal si tuviéramos cinco dígitos significativos? La mejor representación sería (11001, -1000) que es equivalente a 25/256 (0.09765625). ¿Cuántos dígitos significativos necesitamos entonces? Un número infinito. No existe ningún número que cumpla con la siguiente ecuación: sim * 2**-exp.
+
+En la mayoría de las implementaciones de Python tenemos 53 bits de precisión para números flotantes. Así que los dígitos significativos para representar el número 0.1 es igual a:
+
+11001100110011001100110011001100110011001100110011001 que es equivalente al número decimal: 0.1000000000000000055511151231257827021181583404541015625
+
+Muy cercano a 1/10 pero no exactamente 1/10. Ahora ya sabemos la razón de esa respuesta tan extraña. Hay muy pocas situaciones en la que 1.0 es aceptable, pero 0.9999999999999999 no. Pero ¿Cuál es la moraleja de esta historia?
+
+Hasta ahora hemos verificado igualdad con el operador ==. Sin embargo, cuando estamos trabajando con flotantes es mejor asegurarnos que los números sean aproximados en vez de idénticos. Por ejemplo x < 1.0 and x > 0.99999.
+
+________________
+
+
+Enumeración exhaustiva
+12/31
+
+Programas numéricos.
+Pensar de manera algorítmica.
+
+Enumeración exhaustiva
+
+También llamado "adivina y verifica"
+las computadoras actuales son muy muy rápidas.
+Uno de los primeros algoritmos que debes tratar.
+Probar todas las opciones hasta encontrar la respuesta.
+
+_________________
+
+Aproximación de soluciones
+13/31
+
+Problema con enumeración exhaustiva, si no era la respuesta
+exacta o no entraba en nuestro espacio de búsqueda
+no encontraba la solución
+
+cuando hay que dar una respuesta aproximada hay los 
+algoritmos de aproximación de soluciones
+la diferencia entre la realidad y la aproximación se 
+llama epsilon
+mientras epsilon es menor se necesitan más ciclos 
+y demora más.
+
+____________
+
+
+Búsqueda Binaria
+14/31
+
+conjunto de búsqueda debe ser ordenado
+altamente eficiente
+unicamente funciona cuando nuestro conjunto
+se encuentra en orden.
+____________
+
+Funciones y abstracción
+15/31
+
+cualquier programa posible, turing complete
+booleanos, if statement, 
+los lenguajes dan otras abstracciones 
+para que el codigo sea entendible, 
+no necesitas saber de electrónica para utilizar 
+una calculadora, 
+
+Es una habilidad generar estas abstracciones 
+utilizar librerías, un servidor apache
+
+otra habilidad, la decomposición
+mini componentes lo acomodamos de diferente forma
+
+def suma (a, b):
+    total = a + b 
+    return total
+
+suma(2,3)
+
+argumentos de tipo keyword y valores por defecto
+
+se pueden llamar utilizando los valores posicionales y 
+dejando el valor por defecto, o valores posicionales y 
+siendo explícitos en el valor por defecto, o usando las 
+keyword para los valores posicionales
+
+____________
+
+Scope o Alcance
+16/31
+
+contextos de ejecución
+de izquierda a derecha 
+de arriba abajo
+
+_________________
+
+Especificaciones del código
+17/31
+
+el docstring o documentación en python 
+se agrega con """ """ 
+son 3 partes, lo que hace, los parámetros y lo 
+que devuelve la función.
+
+def suma (a,b):
+    """Suma dos valores a y b.
+
+    param int a cualquier entero
+    param int b cualquier entero
+    returns la sumatoria de a y basada
+    """
+    total = a + b 
+    return total 
+
+con help(nombre de funcion) se puede ver
+leer el docstring
+se sale con q.
+
+_______
+
+Recursividad
+18/31
+
+Algoritmica: una forma de crear soluciones
+ultilizando el principio de divide y vencerás 
+
+programática: una técnica programática mediante
+la cual una función se llame a si misma
+
+para poder a empezar a entender la 
+recursividad se necesitan los factoriales
+
+_______
+
+Fibonnacci y la Recursividad
+19/31
+
+La secuencia de Fibonacci es una función matemática que se define recursivamente. En el año 1202, el matemático italiano Leonardo de Pisa, también conocido como Fibonacci, encontró una fórmula para cuantificar el crecimiento que ciertas poblaciones experimentan.
+
+Imagina que una pareja de conejos nace, un macho y una hembra, y luego son liberados. Imagina, también, que los conejos se pueden reproducir hasta la edad de un mes y que tienen un periodo de gestación también de un mes. Por último imagina que estos conejos nunca mueren y que la hembra siempre es capaz de producir una nueva pareja (un macho y una hembra). ¿Cuántos conejos existirán al final de seis meses?
+
+Una forma de visualizar este crecimiento es mirándolo de forma tabular:
+
+Mes	Hembras
+0	1
+1	1
+2	2
+3	3
+4	5
+5	8
+6	13
+Un punto importante a considerar es que para el mes n > 1, hembras(n) = hembras(n - 1) + hembras(n - 2).
+
+Como podemos ver, tenemos una definición distinta a la de factorial que vimos anteriormente. En específico, tenemos dos casos base (0 y 1) y tenemos dos llamadas recursivas (hembras(n - 1) + hembras(n - 2)).
+
+Podemos crear una solución recursiva de manera sencilla:
+
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return 1
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+Aunque la definición es muy sencilla, es también bastante ineficiente. En los siguientes cursos de la serie de pensamiento computacional veremos como calcular exactamente la eficiencia de este algoritmo y cómo optimizarlo. De mientras, platícanos si conoces alguna otra definición recursiva.
+
+____________
+
+Funciones como objetos
+20/31
+
+Una de las características más poderosas de Python es que todo es un objeto, incluyendo las funciones. Las funciones en Python son "ciudadanos de primera clase".
+
+Esto, en sentido amplio, significa que en Python las funciones:
+
+Tienen un tipo
+Se pueden pasar como argumentos de otras funciones
+Se pueden utilizar en expresiones
+Se pueden incluir en varias estructuras de datos (como listas, tuplas,
+diccionarios, etc.)
+Argumentos de otras funciones
+Hasta ahora hemos visto que las funciones pueden recibir parámetros para realizar los cómputos que definen. Algunos de los tipos que hemos pasado son tipos simples como cadenas, números, listas, etc. Sin embargo, también pueden recibir funciones para crear abstracciones más poderosas. Veamos un ejemplo:
+
+def multiplicar_por_dos(n):
+    return n * 2
+
+def sumar_dos(n):
+    return n + 2
+
+def aplicar_operacion(f, numeros):
+    resultados = []
+    for numero in numeros:
+        resultado = f(numero)
+        resultados.append(resultado)
+        return resultados
+
+ nums = [1, 2, 3]
+ aplicar_operacion(multiplicar_por_dos, nums)
+ [2, 4, 6]
+
+ aplicar_operacion(sumar_dos, nums)
+[3, 4, 5]
+Funciones en expresiones
+Una forma de definir una función en una expresión es utilizando el keyword lambda. lambda tiene la siguiente sintaxis: lambda : .
+
+Otro ejemplo interesante es que las funciones se pueden utilizar en una expresión directamente. Esto es posible ya que como lo hemos platicado con anterioridad, en Python las variables son simplemente nombres que apuntan a un objeto (en este caso a una función). Por ejemplo:
+
+sumar = lambda x, y: x + y
+
+sumar(2, 3)
+5
+Funciones en estructuras de datos
+Las funciones también se pueden incluir en diversas estructuras que las permiten almacenar. Por ejemplo, una lista puede guardar diversas funciones a aplicar o un diccionario las puede almacenar como valores.
+
+def aplicar_operaciones(num):
+    operaciones = [abs, float]
+
+    resultado = []
+    for operacion in operaciones:
+        resultado.append(operacion(num))
+
+    return resultado
+
+ aplicar_operaciones(-2)
+[2, -2.0]
+Como pudimos ver, las funciones son objetos muy versátiles que nos permiten tratarlas de diversas maneras y que nos permiten añadir capas adicionales de abstracción a nuestro programa. Compártenos cómo te imaginas que estas capacidades de Python te pueden ayudar a escribir mejores programas.
+
+____________
+
+Tuplas
+21/31
+
+tipos estructurados, mutabilidad 
+y funciones de alto nivel
+
+tuplas
+son secuencias inmutables de objetos.
+A diferencia de las cadenas pueden contener
+cualquier tipo de objeto.
+Puede utilizarse para devolver varios valores 
+en una función
+
+>>> my_tuple = ()
+>>> type(my_tuple)
+<class 'tuple'>
+>>> my_tuple = (1, 'dos', True)
+>>> my_tuple[0]
+1
+>>> my_tuple[1]
+'dos'
+>>> my_tuple[0] = 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> my_tuple = (1)
+>>> type(my_tuple)
+<class 'int'>
+>>> my_tuple =(1,)
+>>> type(my_tuple)
+<class 'tuple'>
+>>> my_other_tuple = (2, 3, 4)
+>>> my_tuple += my_other_tuple
+>>> print(my_tuple)
+(1, 2, 3, 4)
+>>> x, y, z = my_other_tuple
+>>> x
+2
+>>> y
+3
+>>> z
+4
+>>> def coordenadas():
+...     return(5,4)
+... 
+>>> coordenada = coordenadas()
+>>> coordenada
+(5, 4)
+>>> x, y = coordenadas()
+>>> print(x,y)
+5 4
+>>> x
+5
+>>> y
+4
+_______
+
+Rangos
+22/31
+
+Representan una secuencia de enteros.
+rango(comienzo, fin, pasos)
+Al igual que las cadenas y las tuplas, 
+los rangos son inmutables.
+Muy eficientes en uso de memoria y normalmente
+utilizados en for loops
+
+id (my_range)
+
+object equality value equality usando is, 
+
+>>> for i in range(0, 101, 2):
+...     print(i)
+
+Listas y mutabilidad
+23/31
+
+son secuencias de objetos, pero a diferencia
+de las Tuplas, si son mutables.
+append, pop, remove, insert
+
+clonación
+casi siempre es mejor clonar una lista en vez de mutarla
+Para clonar usar notación de rebanadas.
+
+List comprehension
+para aplicar operaciones a toda una secuencia.
+
+>>> my_list[0] = 'a'
+>>> a = [1, 2, 3] 
+>>> c = list(a)
+>>> d = a[::]
+>>> id(a)
+2833323445888
+>>> id(c)
+2833323756352
+>>> id(d) 
+2833323702336
+>>> my_list = list(range(100))
+>>> my_list
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+>>> double = [i * 2 for i in my_list]
+>>> double
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 
+96, 98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 162, 164, 166, 168, 170, 
+172, 174, 176, 178, 180, 182, 184, 186, 188, 190, 192, 194, 196, 198]
+>>> pares = [i for i in my_list if i % 2 == 0]
+>>> pares
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 
+96, 98]
+
+_______
+Diccionarios
+24/31
+
+Son como listas, pero en lugar de usar índices utilizan llaves.
+No tienen orden interno
+Los diccionarios son mutables
+Pueden iterarse.
+
+>>> my_dict = {'David':35,'Erika':32,'Jaime':50, 
+... }
+>>> my_dict['David']
+35
+>>> my_dict['Erik']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Erik'
+>>> my_dict.get('Juan',30) 
+30
+>>> my_dict.get('David',30)
+35
+>>> my_dict['Jaime']=20
+>>> my_dict
+{'David': 35, 'Erika': 32, 'Jaime': 20}
+>>> my_dict['Pedro']=70
+>>> my_dict 
+{'David': 35, 'Erika': 32, 'Jaime': 20, 'Pedro': 70}
+>>> del my_dict['Jaime']
+>>> my_dict
+{'David': 35, 'Erika': 32, 'Pedro': 70}
+>>> for llave in my_dict.keys():
+...     print(llave) 
+... 
+David
+Erika
+Pedro
+>>> for valor in my_dict.values():
+...     print(valor)
+... 
+35
+32
+70
+>>> for llave, valor in my_dict.items():
+...     print(llave,valor)
+... 
+David 35
+Erika 32
+Pedro 70
+>>> 'David' in my_dict
+True
+>>> 'Tom' in my_dict
+False
+
+____________
+Pruebas de caja negra
+25/31
+
+Se basan en la especificación de la función o el programa.
+Prueba inputs y valida outputs.
+Unit testing o integration testing.
+
+Unit que un led prenda e integration que todo el 
+arbol de navidad prenda.
+
+https://platzi.com/blog/que-es-y-como-funciona-tdd/
+
+
+_______
+Pruebas de caja de cristal
+26/31
+
+Se basan en el flujo del programa.
+Prueba todos los caminos posibles de una
+función. Ramificaciones, bucles for y while,
+recursión.
+Regression testing o mocks.
+
+PS C:\Users\user\compupython> python .\caja_cristal.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+____________
+
+Debugging
+27/31
+
+Grace Hoper genero los primeros compiladores.
+Los insectos se comian los cables por eso el término bug.
+
+No te molestes con el debugger. Aprende a utilizar el print statement.
+Estudia los datos.
+Crear hipótesis y experimentos.
+Ten mente abierta. Si entendieras el programa, no tendría bugs.
+Preguntate porque funciona así.
+Registro en forma de tests.
+
+Diseño de experimentos.
+Debugear es un proceso de búsqueda. Cada prueba debe 
+acotar el espacio de búsqueda.
+Busqueda binaria con print statements.
+
+Errores comunes.
+Sospechosos comunes.
+Sé sistemático.
+Argumentos incorrectos, nombres.
+Comparar con == en vez de is (object equality)
+Hiciste un error típico de ti.
+Es posible que el bug no se encuentre donde crees.
+Explícale el problema a otra persona. 
+Lleva un registro de lo que has tratado,
+en forma de tests. 
+Vete a dormir. Despiertas con la solución.
+No te rindas ni te frustres.
+
+____________
+
+Manejo de excepciones
+28/31
+
+Son muy comunes en la programación.
+
+Se manejan con los keywords: Try, except, finally.
+Sirve para ramificar programas.
+No debes silenciarlas, solo imprimir en consola en 
+lugar de manejarla.
+Para aventar exepcion usar keyword raise.
+
+____________
+
+Excepciones y control de flujo
+29/31
+
+Hasta ahora hemos visto como las excepciones nos permiten controlar los posibles errores que pueden ocurrir en nuestro código. Sin embargo, dentro de la comunidad de Python tienen otro uso: control de flujo.
+
+En este momento ya debes estar familiarizado con las estructuras de control flujo que ofrece Python (if... elif...else); entonces, ¿por qué es necesaria otra modalidad para controlar el flujo? Una razón muy específica: el principio EAFP (easier to ask for forgiveness than permission, es más fácil pedir perdón que permiso, por sus siglas en inglés).
+
+El principio EAFP es un estilo de programación común en Python en el cual se asumen llaves, índices o atributos válidos y se captura la excepción si la suposición resulta ser falsa. Es importante resaltar que otros lenguajes de programación favorecen el principio LBYL (look before you leap, revisa antes de saltar) en el cual el código verifica de manera explícita las precondiciones antes de realizar llamadas.
+
+Veamos ambos estilos:
+
+# Python
+
+def busca_pais(paises, pais):
+    &quot;&quot;&quot;
+    Paises es un diccionario. Pais es la llave.
+    Codigo con el principio EAFP.
+    &quot;&quot;&quot;
+    
+    try:
+        return paises[pais]
+    except KeyError:
+        return None
+// Javascript
+
+/**
+* Paises es un objeto. Pais es la llave.
+* Codigo con el principio LBYL.
+*/
+function buscaPais(paises, pais) {
+  if(!Object.keys(paises).includes(pais)) {
+    return null;
+  }
+
+  return paises[pais];
+}
+Como puedes ver, el código de Python accede directamente a la llave y únicamente si dicho acceso falla, entonces se captura la excepción y se provee el código necesario. En el caso de JavaScript, se verifica primero que la llave exista en el objeto y únicamente con posterioridad se accede.
+
+Es importante resaltar que ambos estilos pueden utilizarse en Python, pero el estilo EAFP es mucho más "pythonico".
+
+_______
+
+Afirmaciones
+30/31
+
+Mecanismo si una afirmacion se cumple o no.
+Programación defensiva.
+Pueden utilizarse para verificar que los tipos sean
+correctos en una función.
+También sirven para debuguear.
+
+# assert  <expresion booleana>, <mensaje de error>
+
+_______
+
+Conclusiones
+31/31
+
+comunicar ideas con otros ingenieros.
+desarrollar habilidades cognitivas.
+
+https://platzi.com/clases/poo-python/
 
 
